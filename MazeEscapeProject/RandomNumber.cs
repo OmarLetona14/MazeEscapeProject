@@ -12,8 +12,6 @@ namespace MazeEscapeProject
 
         public int generateRandomX(int board) {
             Random random = new Random((int)DateTime.Now.Ticks);
-           // var seed = Environment.TickCount;
-            //var random = new Random(seed);
             switch (board) {
                 case 1:
                     return random.Next(0, 5);        

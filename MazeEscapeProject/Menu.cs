@@ -297,6 +297,9 @@ namespace MazeEscapeProject
                     }
                     else if (board1[currentCharacter.getX(), currentCharacter.getY()+1].getSimbol().Equals(" "))
                     {
+                        MatrixObject objecto = new MatrixObject(0, currentCharacter.getY(), currentCharacter.getX(), " ");
+
+                        board1[currentCharacter.getX(), currentCharacter.getY()] = objecto;
                         currentCharacter.setY(currentCharacter.getY() + 1);
                         board1[currentCharacter.getX(), currentCharacter.getY()] = currentCharacter;
                         Console.WriteLine("Se movio el personaje a la posicion; X: " + currentCharacter.getX() +
