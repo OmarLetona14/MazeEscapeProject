@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace MazeEscapeProject
 {
-    class Program
+    class Star : MatrixObject
     {
-        static Menu menu = new Menu();
-        static void Main(string[] args)
+        public Star(int value, int y, int x, string simbol) : base(value, y, x, simbol)
         {
-            menu.MainMenu();
         }
     }
 }
