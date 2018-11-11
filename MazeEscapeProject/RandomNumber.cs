@@ -18,7 +18,7 @@ namespace MazeEscapeProject
                 case 2:
                     return random.Next(0 , 6);
                 case 3:
-                    return random.Next(0, 8);
+                    return random.Next(0, 8); 
             }
             return 0;
         }

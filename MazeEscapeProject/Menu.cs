@@ -180,7 +180,7 @@ namespace MazeEscapeProject
                         GameMenu();
                     } else if (board1[currentCharacter.getX() + 1, currentCharacter.getY()].getSimbol().Equals("*")) {
                         Console.WriteLine("***************Encontró la estrella********************");
-                        restartGame();
+                        nextLevel(xD, yD, obstacles, enemys);
                     }
                     
                     break;
@@ -276,7 +276,7 @@ namespace MazeEscapeProject
                     else if (board1[currentCharacter.getX(), currentCharacter.getY()-1].getSimbol().Equals("*"))
                     {
                         Console.WriteLine("***************Encontró la estrella********************");
-                        restartGame();
+                        nextLevel(xD, yD, obstacles, enemys);
                     }
                     break;
                 case "4":
@@ -326,7 +326,7 @@ namespace MazeEscapeProject
                     else if (board1[currentCharacter.getX(), currentCharacter.getY()+1].getSimbol().Equals("*"))
                     {
                         Console.WriteLine("***************Encontró la estrella********************");
-                        restartGame();
+                        nextLevel(xD, yD, obstacles, enemys);
                     }
                     break;
                 case "5":
@@ -486,8 +486,9 @@ namespace MazeEscapeProject
                     {
                         int randX = random.generateRandomX(board);
                         int randY = random.generateRandomY(board);
-                        if (board1[randX, randY].getSimbol().Equals(" "))
-                        {
+                        if (board1[randX, randY].getSimbol().Equals(" ") &&
+                    isStarAlone(randX, randY, limitX, limitY))
+                {
                             Obstacle nuevoObstaculo = new Obstacle(1, randY, randX, "O");
                             board1[randX, randY] = nuevoObstaculo;
                             currObstacles++;
@@ -563,6 +564,40 @@ namespace MazeEscapeProject
                     break;
 
             }
+        }
+
+        public Boolean isStarAlone(int xR,int yR,int xLim, int yLim) {
+            int count = 0;
+            int count2 = 0;
+            Boolean condition = false;
+            if (xR + 1 <= xLim) {
+                if (board1[xR + 1, yR].getSimbol().Equals("*"))
+                { return false; }
+                else { count += 1; }
+            }
+            else { count2 += 1; }
+            if (!(xR - 1 < 0)) {
+                if (board1[xR - 1, yR].getSimbol().Equals("*"))
+                { return false; }
+                else { count += 1; }
+            }
+            else { count2 += 1; }
+            if (yR + 1 <= yLim) {
+                if (board1[xR, yR + 1].getSimbol().Equals("*"))
+                { return false; }
+                else { count += 1; }
+            }
+            else { count2 += 1; }
+            if (!(yR - 1 < 0)) {
+                if (board1[xR, yR - 1].getSimbol().Equals("*"))
+                { return false; }
+                else { count += 1; }
+            }
+            else { count2 += 1; }
+            if (count +count2 ==4) {
+                condition = true;
+            }
+            return condition;
         }
 
     }
