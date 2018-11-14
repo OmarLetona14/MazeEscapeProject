@@ -566,9 +566,10 @@ namespace MazeEscapeProject
             }
         }
 
+        //Verifica que los espacios adyacentes a la estrella estén vacios, antes
+        //de colocar el nuevo obstaculo
         public Boolean isStarAlone(int xR,int yR,int xLim, int yLim) {
-            int count = 0;
-            int count2 = 0;
+            int count = 0, count2 = 0;
             Boolean condition = false;
             if (xR + 1 <= xLim) {
                 if (board1[xR + 1, yR].getSimbol().Equals("*"))

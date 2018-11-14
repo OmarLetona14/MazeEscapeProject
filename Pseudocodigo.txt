@@ -1,0 +1,112 @@
+Programa: MazeEscapeProject
+Entorno: OPTION, NOMBRE son cadenas de caracteres 
+Algoritmo:	
+	escribir MENU PRINCIPAL
+	leer OPTION 
+	SI OPTION = 1 ENTONCES
+		escribir MENU DEL PERSONAJE
+		leer NOMBRE
+	SI OPTION = 2 ENTONCES
+		escribir MENU DE TABLEROS
+		leer OPTION
+		SI OPTION = 1 ENTONCES 
+			generar TABLERO 1
+			mostrar MENU DE JUEGO 
+			leer OPTION
+			SI OPTION = 1 ENTONCES 
+				mostrar MENU DE COMANDOS
+				leer OPTION
+				SI OPTION = 1 ENTONCES
+					mover hacia la derecha
+				SI OPTION = 2 ENTONCES
+					mover hacia la izquierda
+				SI OPTION = 3 ENTONCES
+					mover hacia abajo
+				SI OPTION = 4 ENTONCES
+					mover hacia arriba
+				SI OPTION = 5 ENTONCES
+					atacar a la derecha
+				SI OPTION = 6 ENTONCES
+					atacar a la izquierda
+				SI OPTION = 7 ENTONCES
+					atacar hacia abajo
+				SI OPTION = 8 ENTONCES
+					atacar hacia arriba
+				SI OPTION = 8 ENTONCES
+					regresar a MENU DE JUEGO
+			SI OPTION = 2 ENTONCES
+				imprimir TABLERO 1
+			SI OPTION = 3 ENTONCES 
+				mostrar ESTATUS DEL PERSONAJE
+			SI OPTION = 4 ENTONCES
+				terminar PARTIDA
+				mostrar MENU PRINCIPAL		
+		SI OPTION = 2 ENTONCES
+			generar TABLERO 2
+			mostrar MENU DE JUEGO	
+			leer OPTION
+			SI OPTION = 1 ENTONCES 
+				mostrar MENU DE COMANDOS
+				leer OPTION
+				SI OPTION = 1 ENTONCES
+					mover hacia la derecha
+				SI OPTION = 2 ENTONCES
+					mover hacia la izquierda
+				SI OPTION = 3 ENTONCES
+					mover hacia abajo
+				SI OPTION = 4 ENTONCES
+					mover hacia arriba
+				SI OPTION = 5 ENTONCES
+					atacar a la derecha
+				SI OPTION = 6 ENTONCES
+					atacar a la izquierda
+				SI OPTION = 7 ENTONCES
+					atacar hacia abajo
+				SI OPTION = 8 ENTONCES
+					atacar hacia arriba
+				SI OPTION = 8 ENTONCES
+					regresar a MENU DE JUEGO
+			SI OPTION = 2 ENTONCES
+				imprimir TABLERO 2
+			SI OPTION = 3 ENTONCES 
+				mostrar ESTATUS DEL PERSONAJE
+			SI OPTION = 4 ENTONCES
+				terminar PARTIDA
+				mostrar MENU PRINCIPAL		 
+		SI OPTION = 3 ENTONCES
+			generar TABLERO 3
+			mostrar MENU DE JUEGO
+			leer OPTION
+			SI OPTION = 1 ENTONCES 
+				mostrar MENU DE COMANDOS
+				leer OPTION
+				SI OPTION = 1 ENTONCES
+					mover hacia la derecha
+				SI OPTION = 2 ENTONCES
+					mover hacia la izquierda
+				SI OPTION = 3 ENTONCES
+					mover hacia abajo
+				SI OPTION = 4 ENTONCES
+					mover hacia arriba
+				SI OPTION = 5 ENTONCES
+					atacar a la derecha
+				SI OPTION = 6 ENTONCES
+					atacar a la izquierda
+				SI OPTION = 7 ENTONCES
+					atacar hacia abajo
+				SI OPTION = 8 ENTONCES
+					atacar hacia arriba
+				SI OPTION = 8 ENTONCES
+					regresar a MENU DE JUEGO
+			SI OPTION = 2 ENTONCES
+				imprimir TABLERO 3
+			SI OPTION = 3 ENTONCES 
+				mostrar ESTATUS DEL PERSONAJE
+			SI OPTION = 4 ENTONCES
+				terminar PARTIDA
+				mostrar MENU PRINCIPAL		 	
+		SI  3>OPTION O OPTION<0 ENTONCES
+			mostrar MENU DE ERROR
+	SI OPTION = 3 ENTONCES
+		salir del programa
+	
